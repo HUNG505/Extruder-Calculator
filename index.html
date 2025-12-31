@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>電纜押出製程智慧計算器 V1.1</title>
+    <title>押出量計算機 V1.1</title>
     
     <!-- 引入 React 與 Tailwind (透過 CDN) -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -179,7 +179,6 @@
                                 </h1>
                                 <span className="text-xs bg-blue-600 px-2 py-1 rounded text-blue-100">V1.1</span>
                             </div>
-                            <p className="text-slate-400 text-sm">PRD V1.1 | 動態產能匹配</p>
                         </div>
 
                         <div className="flex-1 overflow-y-auto">
@@ -306,8 +305,8 @@
                             <div className="p-5 bg-slate-50 mt-2 space-y-3 pb-8">
                                 <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">計算結果</h2>
                                 <div className="grid grid-cols-2 gap-3 mb-3">
-                                    <ResultCard title="截面積 Area" value={calculations.area.toFixed(2)} unit="mm²" />
-                                    <ResultCard title="單位重 Unit W" value={calculations.weightPerMeter.toFixed(4)} unit="kg/m" />
+                                    <ResultCard title="截面積" value={calculations.area.toFixed(2)} unit="mm²" />
+                                    <ResultCard title="單位重量" value={calculations.weightPerMeter.toFixed(4)} unit="kg/m" />
                                 </div>
                                 {mode === 'output' ? (
                                     <ResultCard title="預估押出量 Output" value={calculations.resultOutput.toFixed(1)} unit="kg/hr" highlight={true} warning={calculations.isOverload} subtext={`目前上限: ${calculations.currentMaxOutput} kg/hr`} />
