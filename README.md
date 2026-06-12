@@ -16,4 +16,4 @@
 
 ## **如何使用**
 
-點擊右側的 GitHub Pages 連結即可直接開啟計算機。
+點擊[連結](https://hung505.github.io/Extruder-Calculator/)即可直接開啟計算機。
